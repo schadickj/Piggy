@@ -80,9 +80,13 @@ class Piggy(PiggyParent):
         # TODO: check to see if it's safe before dancing
         
         # lower-ordered example...
-        self.right(primary=50, counter=50)
-        time.sleep(2)
-        self.stop()
+        self.right()
+        time.sleep(3)
+        self.deg_fwd(360)
+        time.sleep(3)
+        self.left()
+        time.sleep(3)
+        self.back(360)
         
 
     def safe_to_dance(self):
