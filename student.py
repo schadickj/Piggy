@@ -81,13 +81,13 @@ class Piggy(PiggyParent):
         
         # lower-ordered example...
         self.right()
-        time.sleep(1)
+        time.sleep(3)
         self.left()
-        time.sleep(1)
+        time.sleep(3)
         self.right()
-        time.sleep(1)
+        time.sleep(3)
         self.left()
-        time.sleep(1)
+        time.sleep(3)
     
         
 
