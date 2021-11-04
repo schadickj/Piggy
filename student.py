@@ -60,17 +60,17 @@ class Piggy(PiggyParent):
       self.deg_fwd(360)
       time.sleep(3)
       self.right()
-      time.sleep(.8)
+      time.sleep(.9)
       self.stop
       self.deg_fwd(360)
       time.sleep(3)
       self.right()
-      time.sleep(.8)
+      time.sleep(.9)
       self.stop
       self.deg_fwd(360)
       time.sleep(3)
       self.right()
-      time.sleep(.8)
+      time.sleep(.9)
       self.stop
       self.deg_fwd(360)
       time.sleep(3)
