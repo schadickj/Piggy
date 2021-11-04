@@ -81,16 +81,22 @@ class Piggy(PiggyParent):
         
         # lower-ordered example...
         self.right()
-        time.sleep(3)
+        time.sleep(1)
         self.left()
-        time.sleep(3)
+        time.sleep(1)
         self.right()
-        time.sleep(3)
+        time.sleep(1)
         self.left()
-        time.sleep(3)
-    
-        
-
+        time.sleep(1)
+        self.right()
+        time.sleep(1)
+        self.left()
+        time.sleep(1)
+        self.right()
+        time.sleep(1)
+        self.left()
+        time.sleep(1)
+        self.stop
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
         pass
