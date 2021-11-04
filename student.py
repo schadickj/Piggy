@@ -58,6 +58,7 @@ class Piggy(PiggyParent):
     '''
     def jesse(self):
       self.deg_fwd(360)
+      time.sleep(3)
       self.right()
       time.sleep(1)
       self.stop
