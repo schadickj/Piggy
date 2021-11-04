@@ -84,8 +84,11 @@ class Piggy(PiggyParent):
         time.sleep(2.5)
         self.left()
         time.sleep(2.5)
-        self.back(360)
-        self.stop
+        self.right()
+        time.sleep(2.5)
+        self.left()
+        time.sleep(2.5)
+    
         
 
     def safe_to_dance(self):
