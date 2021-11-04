@@ -58,6 +58,9 @@ class Piggy(PiggyParent):
     '''
     def jesse(self):
       self.deg_fwd(360)
+      self.right()
+      self.sleep(1)
+      self.stop
 
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
