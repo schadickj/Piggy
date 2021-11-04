@@ -82,11 +82,10 @@ class Piggy(PiggyParent):
         # lower-ordered example...
         self.right()
         time.sleep(3)
-        self.deg_fwd(360)
-        time.sleep(3)
         self.left()
         time.sleep(3)
         self.back(360)
+        time.sleep(3)
         
 
     def safe_to_dance(self):
