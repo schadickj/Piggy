@@ -41,6 +41,7 @@ class Piggy(PiggyParent):
                 "f": ("Follow", self.follow),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
+                "s*2"("square", self.square),
                 "j": ("Jesse's Test", self.jesse)
                 }
         # loop and print the menu...
@@ -57,6 +58,14 @@ class Piggy(PiggyParent):
     ****************
     '''
     def jesse(self):
+      while True:
+        if self.read_distance() < 250:
+          self.print "I can't move"
+        else:
+          pass
+          
+  
+    def square(self):
       self.deg_fwd(360)
       time.sleep(3)
       self.right()
@@ -99,7 +108,7 @@ class Piggy(PiggyParent):
         self.stop()
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
-        pass
+       return True
 
     def shake(self):
         """ Another example move """
