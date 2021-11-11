@@ -60,7 +60,7 @@ class Piggy(PiggyParent):
     def jesse(self):
       while True:
         if self.read_distance() < 250:
-          self.print "I can't move"
+          self.print ("I can't move")
         else:
           pass
           
