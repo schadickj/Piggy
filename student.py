@@ -59,8 +59,8 @@ class Piggy(PiggyParent):
     '''
     def jesse(self):
       while True:
-        self.fwd(1)
-        if self.read_distance() < 50:
+        self.fwd(360)
+        if self.read_distance() > 50:
           self.stop
         else:
           pass
