@@ -62,6 +62,7 @@ class Piggy(PiggyParent):
         self.fwd()
         if self.read_distance() < 50:
           self.stop()
+          return True
         else:
           pass
   
