@@ -59,11 +59,7 @@ class Piggy(PiggyParent):
     '''
     def jesse(self):
       while True:
-        if self.read_distance() < 250:
-          self.print ("I can't move")
-        else:
-          pass
-          
+        self.read_distance
   
     def square(self):
       self.deg_fwd(360)
