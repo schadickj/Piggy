@@ -59,7 +59,7 @@ class Piggy(PiggyParent):
     '''
     def jesse(self):
       while True:
-        self.read_distance
+        self.read_distance()
   
     def square(self):
       self.deg_fwd(360)
@@ -102,6 +102,7 @@ class Piggy(PiggyParent):
         self.left()
         time.sleep(1)
         self.stop()
+
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
        self.pass()
