@@ -129,7 +129,6 @@ class Piggy(PiggyParent):
     def obstacle_count(self):
         """Does a 360 scan and returns the number of obstacles it sees"""
         pass
-
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
