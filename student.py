@@ -59,13 +59,14 @@ class Piggy(PiggyParent):
     '''
     def jesse(self):
       while True:
+        self.fwd()
         if self.read_distance() < 100:
           for number in range(2):
+            return True
             self.right()
             time.sleep(1)
-            return True
         else:
-          self.fwd()
+          pass
   
     def square(self):
       self.deg_fwd(360)
