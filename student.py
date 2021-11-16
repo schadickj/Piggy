@@ -61,16 +61,21 @@ class Piggy(PiggyParent):
       while True:
         self.fwd()
         if self.read_distance() < 100:
-          self.right()
-          time.sleep(1)
-          self.fwd()
-          time.sleep(1)
-          self.left()
-          time.sleep(1)
-          self.fwd()
+          self.stop()
+          self.servo(1000)
+          right = self.read_distance()
+          time.sleep(1.5)
+          self.servo(2000)
+          left = self.read_distance()
+          time.sleep(1.5)
+          self.servo(1400)
+        if right > left:
+          self.right
+        elif left > right:
+          self.left
         else:
           pass
-  
+
     def square(self):
       self.deg_fwd(360)
       time.sleep(3)
