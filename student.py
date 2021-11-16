@@ -61,7 +61,9 @@ class Piggy(PiggyParent):
       while True:
         self.fwd()
         if self.read_distance() < 100:
+          self.stop()
           self.servo(1000)
+          time.sleep(3)
           self.servo(2000)
         else:
           pass
