@@ -64,6 +64,7 @@ class Piggy(PiggyParent):
           self.stop()
           self.servo(1000)
           self.read_distance()
+          self.get_heading()
           time.sleep(1.5)
           self.servo(2000)
           self.read_distance()
@@ -71,7 +72,7 @@ class Piggy(PiggyParent):
           self.servo(1400)
         else:
           pass
-  
+  #box boy is back for move to box and go around it
     def square(self):
       self.deg_fwd(360)
       time.sleep(3)
