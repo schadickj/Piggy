@@ -71,12 +71,14 @@ class Piggy(PiggyParent):
           self.servo(1400)
           if (right > left):
             self.right()
-            time.sleep(2)
+            time.sleep(1)
             self.fwd()
+            time.sleep(1)
           elif (left > right):
             self.left()
-            time.sleep(2)
+            time.sleep(1)
             self.fwd()
+            time.sleep(1)
         else:
           pass
 
