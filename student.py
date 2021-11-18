@@ -70,9 +70,9 @@ class Piggy(PiggyParent):
           time.sleep(1.5)
           self.servo(1400)
           if right > left:
-            self.right
+            self.right()
           elif left > right:
-            self.left
+            self.left()
         else:
           pass
 
