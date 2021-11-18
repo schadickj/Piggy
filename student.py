@@ -72,7 +72,7 @@ class Piggy(PiggyParent):
           if right > left:
             self.right
           elif left > right:
-          self.left
+            self.left
         else:
           pass
 
