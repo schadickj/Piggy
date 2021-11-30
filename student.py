@@ -65,7 +65,7 @@ class Piggy(PiggyParent):
         self.servo(1800)
         time.sleep(.25)
         self.servo(1400)
-#just a Test
+
 
     def close_edge(self):
       while True:
