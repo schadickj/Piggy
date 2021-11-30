@@ -60,6 +60,7 @@ class Piggy(PiggyParent):
     def jesse(self):
     while True:
       self.fwd()
+      time.sleep(.25)
       self.servo(1000)
       time.sleep(.25)
       self.servo(1800)
