@@ -61,10 +61,13 @@ class Piggy(PiggyParent):
       while True:
         self.fwd()
         self.servo(1000)
+        self.read_distance()
         time.sleep(.25)
         self.servo(1800)
+        self.read_distance()
         time.sleep(.25)
         self.servo(1400)
+        self.read_distance()
 
 
     def close_edge(self):
