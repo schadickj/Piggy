@@ -58,13 +58,13 @@ class Piggy(PiggyParent):
     ****************
     '''
     def jesse(self):
-    while True:
-      self.fwd()
-      self.servo(1000)
-      time.sleep(.25)
-      self.servo(1800)
-      time.sleep(.25)
-      self.servo(1400)
+      while True:
+        self.fwd()
+        self.servo(1000)
+        time.sleep(.25)
+        self.servo(1800)
+        time.sleep(.25)
+        self.servo(1400)
 
 
     def close_edge(self):
