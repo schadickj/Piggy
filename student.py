@@ -67,7 +67,10 @@ class Piggy(PiggyParent):
         self.read_distance()
         time.sleep(.25)
         self.servo(1400)
-        self.read_distance()
+        if self.read_distance() < 100:
+          self.close_edge()
+        else:
+          pass
 
 
     def close_edge(self):
