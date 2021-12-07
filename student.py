@@ -64,8 +64,6 @@ class Piggy(PiggyParent):
         self.servo(1000)
         if self.read_distance() < 200:
           self.swerve_right()
-        else:
-          pass
         time.sleep(.1)
         self.servo(1800)
         if self.read_distance() < 200:
@@ -74,8 +72,7 @@ class Piggy(PiggyParent):
         self.servo(1400)
         if self.read_distance() < 200:
           self.close_edge()
-        else:
-          pass
+  
 
     def swerve_left(self):
       time.sleep(.3)
@@ -113,9 +110,6 @@ class Piggy(PiggyParent):
             time.sleep(1)
 
     def close_edge(self):
-      while True:
-        self.fwd()
-        if self.read_distance() < 200:
           self.stop()
           self.servo(1000)
           right = self.read_distance() 
@@ -138,8 +132,6 @@ class Piggy(PiggyParent):
             time.sleep(1)
             self.right()
             time.sleep(1)
-        else:
-          pass
 
     def square(self):
       self.deg_fwd(360)
