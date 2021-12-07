@@ -96,7 +96,7 @@ class Piggy(PiggyParent):
     def close_edge(self):
       while True:
         self.fwd()
-        if self.read_distance() < 100:
+        if self.read_distance() < 200:
           self.stop()
           self.servo(1000)
           right = self.read_distance() 
