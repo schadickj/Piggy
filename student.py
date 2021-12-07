@@ -43,7 +43,7 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "s*2": ("Square", self.square),
                 "j": ("Jesse's Test", self.jesse),
-                "cl": ("Close Edge", self.close_edge)
+                "m": ("maze_solver", self.maze_solver)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -92,6 +92,25 @@ class Piggy(PiggyParent):
       self.right()
       time.sleep(1)
       self.fwd()
+  
+  def maze_solver(self):
+      while True:
+        self.fwd()
+        if self.read_distance() < 200:
+          self.stop()
+          self.servo(1000)
+          right = self.read_distance() 
+          time.sleep(1.5)
+          self.servo(1800)
+          left = self.read_distance() 
+          time.sleep(1.5)
+          self.servo(1400)
+          if (right > left):
+            self.right()
+            time.sleep(1)
+          elif (left > right):
+            self.left()
+            time.sleep(1)
 
     def close_edge(self):
       while True:
