@@ -92,7 +92,7 @@ class Piggy(PiggyParent):
   
     def maze_solver(self):
       while True:
-        time.sleep(1)
+        self.stop()
         self.fwd()
         if self.read_distance() < 200:
           self.stop()
