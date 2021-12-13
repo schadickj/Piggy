@@ -102,11 +102,11 @@ class Piggy(PiggyParent):
           left = self.read_distance() 
           time.sleep(1.5)
           self.servo(1400)
-          if (right < left):
-            self.right()
-            time.sleep(.75)
-          elif (left < right):
+          if (right > left):
             self.left()
+            time.sleep(.75)
+          elif (left > right):
+            self.right()
             time.sleep(.75)
 
     def close_edge(self):
