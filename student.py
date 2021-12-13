@@ -91,13 +91,13 @@ class Piggy(PiggyParent):
       self.fwd()
   
     def maze_solver(self):
-      self.servo(1400)
       while True:
         self.fwd()
         if self.read_distance() < 100:
           self.stop()
           self.servo(2000)
           self.read_distance() 
+          self.servo(1400)
           if self.read_distance() < 100:
             self.stop()
             time.sleep(.75)
