@@ -43,7 +43,8 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "s*2": ("Square", self.square),
                 "j": ("Jesse's Test", self.jesse),
-                "m": ("maze_solver", self.maze_solver)
+                "m": ("maze_solver", self.maze_solver),
+                "a": ("arrow fail", self.arrows),
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -72,7 +73,12 @@ class Piggy(PiggyParent):
         self.servo(1400)
         if self.read_distance() < 200:
           self.close_edge()
-  
+    
+    def arrows(self):
+      self.window.onkey(self.right(), self.turn_right)
+      self.window.onkey(self.fwd(), self.straight)
+      self.window.onkey(self.left(), self.turn_left)
+      self.window.onkey(self.back(), self.down)
 
     def swerve_left(self):
       time.sleep(.3)
