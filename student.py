@@ -22,7 +22,6 @@ class Piggy(PiggyParent):
         self.MIDPOINT = 1400  # what servo command (1000-2000) is straight forward for your bot?
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
         self.load_defaults()
-        self.window() = window
         
     def load_defaults(self):
         """Implements the magic numbers defined in constructor"""
@@ -44,8 +43,7 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "s*2": ("Square", self.square),
                 "j": ("Jesse's Test", self.jesse),
-                "m": ("maze_solver", self.maze_solver),
-                "a": ("arrow fail", self.arrows),
+                "m": ("maze_solver", self.maze_solver)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -74,12 +72,7 @@ class Piggy(PiggyParent):
         self.servo(1400)
         if self.read_distance() < 200:
           self.close_edge()
-    
-    def arrows(self):
-      self.window.onkey(self.right())
-      self.window.onkey(self.fwd())
-      self.window.onkey(self.left())
-      self.window.onkey(self.back())
+  
 
     def swerve_left(self):
       time.sleep(.3)
