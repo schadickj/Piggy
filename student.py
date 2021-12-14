@@ -22,6 +22,7 @@ class Piggy(PiggyParent):
         self.MIDPOINT = 1400  # what servo command (1000-2000) is straight forward for your bot?
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
         self.load_defaults()
+        self.window = window
         
     def load_defaults(self):
         """Implements the magic numbers defined in constructor"""
@@ -75,10 +76,10 @@ class Piggy(PiggyParent):
           self.close_edge()
     
     def arrows(self):
-      self.onkey(self.right())
-      self.onkey(self.fwd())
-      self.onkey(self.left())
-      self.onkey(self.back())
+      self.window.onkey(self.right())
+      self.window.onkey(self.fwd())
+      self.window.onkey(self.left())
+      self.window.onkey(self.back())
 
     def swerve_left(self):
       time.sleep(.3)
