@@ -75,10 +75,10 @@ class Piggy(PiggyParent):
           self.close_edge()
     
     def arrows(self):
-      self.window.onkey(self.right(), self.turn_right)
-      self.window.onkey(self.fwd(), self.straight)
-      self.window.onkey(self.left(), self.turn_left)
-      self.window.onkey(self.back(), self.down)
+      self.window.onkey(self.right())
+      self.window.onkey(self.fwd())
+      self.window.onkey(self.left())
+      self.window.onkey(self.back())
 
     def swerve_left(self):
       time.sleep(.3)
